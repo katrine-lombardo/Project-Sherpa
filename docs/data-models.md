@@ -66,7 +66,8 @@ definition and whether it's a leadership or individual contributor skill.
 
 ### ee_skills
 This joining table allows us to see the current skill proficiency for a
-particular skill for a partocular employee.
+particular skill for a particular employee. Note that in a startup environment
+it won't always be the employee's direct manager conducting these evaluations.
 
 | Field            | Type              | What it is                           |
 | ---------------- | ----------------- | ------------------------------------ |
