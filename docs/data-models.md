@@ -75,7 +75,7 @@ particular skill for a partocular employee.
 | skill_id         | FOREIGN KEY       | Foreign Key (skills.skill_id)        |
 | proficiency      | INTEGER           | Proficiency level on scale of 1-5    |
 | last_updated     | DATETIME          | Date proficiency was last updated    |
-| updated_by       | FOREIGN KEY       | Foreign Key (employees.manager_id)   |
+| updated_by       | INTEGER           | Employee ID of the individual who evaluated this employee's proficiency |
 
 ### position_skills
 This joining table allows us to pull the required skill levels for any position
