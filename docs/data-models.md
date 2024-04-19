@@ -25,7 +25,7 @@ like held position, hire date, permissions level, and reporting structure.
 | position_id      | FOREIGN KEY       | Foreign Key (positions.position_id)  |
 | ee_hiredate      | DATETIME          | Date employee was hired              |
 | ee_permissions   | VARCHAR           | Admin, Department Head, Manager, or End User |
-| supervisor_id    | INTEGER           | The employee ID of the employee's manager |
+| manager_id       | INTEGER           | The employee ID of the employee's manager |
 
 ### departments
 This table separates department as its own concern, given the need to be able to
@@ -75,6 +75,7 @@ particular skill for a partocular employee.
 | skill_id         | FOREIGN KEY       | Foreign Key (skills.skill_id)        |
 | proficiency      | INTEGER           | Proficiency level on scale of 1-5    |
 | last_updated     | DATETIME          | Date proficiency was last updated    |
+| updated_by       | FOREIGN KEY       | Foreign Key (employees.manager_id)   |
 
 ### position_skills
 This joining table allows us to pull the required skill levels for any position
@@ -84,5 +85,5 @@ at any level.
 | ---------------- | ----------------- | ------------------------------------ |
 | id               | SERIAL            | Primary Key                          |
 | position_id      | FOREIGN KEY       | Foreign Key (positions.position_id)  |
-| proficiency      | INTEGER           | Proficiency level on scale of 1-5    |
-| last_updated     | DATETIME          | Date proficiency was last updated    |
+| skill_id         | FOREIGN KEY       | Foreign Key (skills.skill_id)        |
+| target           | INTEGER           | Proficiency level required to be considered proficient in this skill |
