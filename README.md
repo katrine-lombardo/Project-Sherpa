@@ -54,4 +54,6 @@ React with Vite
 
 ## Getting the App Running
 Run the server:
-```uvicorn api.main:app --reload```
+```
+fastapi dev api/main.py
+```
