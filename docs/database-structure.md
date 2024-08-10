@@ -26,7 +26,7 @@ The `employees` table elaborates on the user table, adding additional informatio
 | manager_id       | INTEGER           | The employee ID of the employee's manager (nullable for CEO or Founder roles) |
 
 ### Departments
-This table separates department as its own concern, given the need to be able to change department names and configuration frequently.
+The `departments` table separates department as its own concern, given the need to be able to change department names and configuration frequently.
 
 | Field            | Type              | Description                          |
 | ---------------- | ----------------- | ------------------------------------ |
