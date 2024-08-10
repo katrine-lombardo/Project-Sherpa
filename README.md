@@ -19,6 +19,7 @@ the Sherpa App to address these limitations, while simultaneously adding
 additional functionality to improve the overall design of the process.
 
 ## Technologies Used
+Python JavaScript React Postgres Bootstrap Docker
 
 
 ## Design
@@ -28,16 +29,16 @@ This database structure manages user, employee, department, position, and skill
 information by using relational principles to ensure data integrity and ease of
 querying. Key tables include users for authorization data, employees for job
 details, departments for organizational units, positions for job roles, and
-skills for employee capabilities. Joining tables like employee_skills and
-position_skills are employed to handle many-to-many relationships, ensuring
+skills for employee capabilities. Joining tables like Reviews and
+Competencies are employed to handle many-to-many relationships, ensuring
 normalization, flexibility, scalability, and improved query performance by
 avoiding redundancy and simplifying complex data associations.
 
 ### Backend
+FastAPI
 
 ### Frontend
-
-
+React with Vite
 
 
 ## Obstacles
